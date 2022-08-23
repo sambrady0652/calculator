@@ -9,8 +9,10 @@ class CalculationsController < ApplicationController
   end
 
   def create
-    @calc = Calculation.new(inputs: params.require(:inputs))
-    @calc.output = CalculationRunner.new(inputs: params[:inputs]).run_calculation
+    runner_klass = CalculationRunner.new(inputs: params[:inputs])
+    @calc = Calculation.new
+    @calc.inputs = runner_klass.displayed_inputs
+    @calc.output = runner_klass.run_calculation
     # normally I would include some validation here before saving anything to DB
     @calc.save
     redirect_to @calc

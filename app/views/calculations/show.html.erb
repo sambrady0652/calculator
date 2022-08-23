@@ -1,6 +1,15 @@
-<h1>Here is your calculated value:</h1>
+<h1>Calculated Value:</h1>
+<p>
+  The following was calculated:
+</p>
+<p>
+  <%= @calc.inputs %>
+</p>
+<p>
+  and here is the result:
+</p>
 <p>
   <%= @calc.output %>
 </p>
 
-<%= link_to "Start a new Calculation", calculations_new_path %>
+<%= link_to "Start a new calculation", calculations_new_path %>

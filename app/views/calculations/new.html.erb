@@ -1,6 +1,11 @@
-<h1>New Calculation:</h1>
+<h1>Simple Calculator:</h1>
 <%= form_tag(calculations_path, method: "post") do %>
-  <%= label_tag(:inputs, "Calculate Here (eg: '2 x 2'):") %>
-  <%= text_field_tag(:inputs) %>
+  <p>
+    <%= label_tag(:inputs, "Enter the calculation you'd like to run here:") %>
+  </p>
+  <p>
+    Note: you can supply multiple numbers, but only one operator (+, -, /, or *)
+  </p>
+  <%= text_field_tag(:inputs, "", placeholder: "2 + 2") %>
   <%= submit_tag("Calculate!") %>
 <% end %>
