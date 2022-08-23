@@ -12,5 +12,8 @@ Once you have opened the directory, run the following commands in your terminal:
 
 Once the server is running, navigate to `localhost:3000` in your web browser and enter the values you'd like to calculate.
 
+To run the unit tests, copy this command into your terminal window:
+
+`bundle exec rspec spec/unit/lib/calculation_runner_spec.rb`
 
 NOTE: This application was built using Ruby 2.6.6 and postgresql
