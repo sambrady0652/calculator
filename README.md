@@ -1,7 +1,8 @@
 # Calculator
 
 Supply an operator-separated string of numbers you would like to have calculated
-Note: please supply only one operator, but feel free to supply as many numbers as you'd like
+
+Please supply only one operator, but feel free to supply as many numbers as you'd like
 
 ## Setup
 
